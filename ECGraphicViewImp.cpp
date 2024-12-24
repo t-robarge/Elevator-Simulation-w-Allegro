@@ -1,10 +1,3 @@
-
-//  ECGraphicViewImp.cpp
-//  
-//
-//  Created by Yufeng Wu on 3/2/22.
-//
-
 #include "ECGraphicViewImp.h"
 #include "allegro5/allegro_primitives.h"
 #include <allegro5/allegro_image.h>
