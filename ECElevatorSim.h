@@ -1,10 +1,3 @@
-//
-//  ECElevatorSim.h
-//  
-//
-//  Created by Yufeng Wu on 6/27/23.
-//  Elevator simulation
-
 #ifndef ECElevatorSim_h
 #define ECElevatorSim_h
 
@@ -18,27 +11,7 @@
 #include <algorithm>
 using namespace std;
 
-//#include "State.h"
-
-//*****************************************************************************
-// DON'T CHANGE THIS CLASS
-// 
-// Elevator simulation request: 
-// (i) time: when the request is made
-// (ii) floorSrc: which floor the user is at at present
-// (iii) floorDest floor: where the user wants to go; we assume floorDest != floorSrc
-// 
-// Note: a request is in three stages:
-// (i) floor request: the passenger is waiting at floorSrc; once the elevator arrived 
-// at the floor (and in the right direction), move to the next stage
-// (ii) inside request: passenger now requests to go to a specific floor once inside the elevator
-// (iii) Once the passenger arrives at the floor, this request is considered to be "serviced"
-//
-// two sspecial requests:
-// (a) maintenance start: floorSrc=floorDest=-1; put elevator into maintenance 
-// starting at the specified time; elevator starts at the current floor
-// (b) maintenance end: floorSrc=floorDest=0; put elevator back to operation (from the current floor)
-
+// Request Class
 class ECElevatorSimRequest
 {
 public:
@@ -77,7 +50,7 @@ public:
         }
     }
 
-    // Wait time: get/set. Note: you need to maintain the wait time yourself!
+    // Wait time: get/set. 
     int GetArriveTime() const { return timeArrive; }
     void SetArriveTime(int t) { timeArrive = t; }
 
